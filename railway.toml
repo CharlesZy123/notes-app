@@ -1,0 +1,6 @@
+[build]
+builder = "nixpacks"
+
+[deploy]
+startCommand = "chmod +x ./railway/init-app.sh && sh ./railway/init-app.sh"
+healthcheckPath = "/"
