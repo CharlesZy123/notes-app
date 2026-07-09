@@ -9,5 +9,5 @@ php artisan view:cache
 echo "=== Running migrations ==="
 php artisan migrate --force
 
-echo "=== Starting nginx ==="
-nginx -g "daemon off;"
+echo "=== Starting server on port $PORT ==="
+php artisan serve --host=0.0.0.0 --port=${PORT:-8080}
